@@ -54,8 +54,9 @@ puts x
 NameError: undefined local variable or method `shoes' for main:Object
   from (irb):3
   from /usr/local/rvm/rubies/ruby-2.0.0-rc2/bin/irb:16:in `<main>'
-
 ```
+
+#### **'shoes' 方法或变量未定义，在第三行** 
 
 ## 7. Write a program that prints a greeting message. This program should contain amethod called greeting that takes a name as its parameter and returns a string.
 
@@ -75,6 +76,10 @@ print something = "nothing"
 
 ```
 
+**2**
+
+**"Joe"** 
+
 ## 9. Write a program that includes a method called multiply that takes two arguments and returns the product of the two numbers.
 
 
@@ -88,11 +93,25 @@ def scream(words)
 end
 
 scream("Yippeee")
-
 ```
 
+**由于puts之前return 所以为空**
+
 ## 11. 1) Edit the method definition in exercise #10 so that it does print words on the screen.
+
+```
+def scream(words)
+  words += '!!!!'
+  puts words
+  return
+end
+
+scream('Yippeee')
+```
+
 ##     2) What does it return now?
+
+**nil**
 
 
 ## 12. What does the following error message tell you?
@@ -103,5 +122,6 @@ ArgumentError: wrong number of arguments (1 for 2)
   from (irb):1:in `calculate_product'
   from (irb):4
   from /Users/username/.rvm/rubies/ruby-2.0.0-p353/bin/irb:12:in `<main>'
-
 ```
+
+**需要传2个参数，只传了1个**
