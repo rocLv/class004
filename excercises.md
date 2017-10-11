@@ -32,7 +32,7 @@ x = 0
 end
 puts x
 
-```
+```3
 
 and
 
@@ -46,7 +46,7 @@ end
 
 puts x
 
-```
+```3
 
 ## 6. What does the following error message tell you?
 
@@ -55,27 +55,43 @@ NameError: undefined local variable or method `shoes' for main:Object
   from (irb):3
   from /usr/local/rvm/rubies/ruby-2.0.0-rc2/bin/irb:16:in `<main>'
 
-```
+```变量或者方法没有被定义
 
-## 7. Write a program that prints a greeting message. This program should contain amethod called greeting that takes a name as its parameter and returns a string.
+## 7. Write a program that prints a greeting message. This program should contain method called greeting that takes a name as its parameter and returns a string.
+
+
+def greeting(a)
+  b = a.to_i
+  p "#{b}"
+end
+
+
 
 
 ## 8. What do the following expressions evaluate to?
 
 ```ruby
-x = 2
+x = 2                             2
 
-puts x = 2
+puts x = 2                        2
 
-p name = "Joe"
+p name = "Joe"                    "Joe"
 
-four = "four"
+four = "four"                     "four"
 
-print something = "nothing"
+print something = "nothing"       nothing
 
 ```
 
 ## 9. Write a program that includes a method called multiply that takes two arguments and returns the product of the two numbers.
+
+
+def multiply(a,b)
+  c = a * b
+  puts "#{c}"
+end
+multiply(2,11)
+
 
 
 ## 10. What will the following code print to the screen?
@@ -89,10 +105,20 @@ end
 
 scream("Yippeee")
 
-```
+```nil
 
 ## 11. 1) Edit the method definition in exercise #10 so that it does print words on the screen.
 ##     2) What does it return now?
+
+def scream(words)
+  words = words + "!!!!"
+  puts words
+end
+
+scream("Yippeee")
+
+Yippeee!!!!
+
 
 
 ## 12. What does the following error message tell you?
@@ -104,4 +130,4 @@ ArgumentError: wrong number of arguments (1 for 2)
   from (irb):4
   from /Users/username/.rvm/rubies/ruby-2.0.0-p353/bin/irb:12:in `<main>'
 
-```
+```参数错误
