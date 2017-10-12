@@ -57,6 +57,8 @@ NameError: undefined local variable or method `shoes' for main:Object
 
 ```
 
+**'shoes' undefined local variable**
+
 ## 7. Write a program that prints a greeting message. This program should contain amethod called greeting that takes a name as its parameter and returns a string.
 
 
@@ -64,19 +66,30 @@ NameError: undefined local variable or method `shoes' for main:Object
 
 ```ruby
 x = 2
+**=>2**
 
 puts x = 2
+**2**
+**=>nill**
 
 p name = "Joe"
+**"joe"**
+**=>"joe"**
 
 four = "four"
+**=>"four"**
 
 print something = "nothing"
+**nothing=>nil**
 
 ```
 
 ## 9. Write a program that includes a method called multiply that takes two arguments and returns the product of the two numbers.
 
+
+def multiply(m, n)
+  m * n
+end
 
 ## 10. What will the following code print to the screen?
 
@@ -90,10 +103,21 @@ end
 scream("Yippeee")
 
 ```
+**nil**
 
 ## 11. 1) Edit the method definition in exercise #10 so that it does print words on the screen.
-##     2) What does it return now?
 
+```ruby
+def scream(words)
+  words = words + "!!!"
+  prints words
+end
+
+scream("Yippeee")
+```
+
+##     2) What does it return now?
+**=>nil**
 
 ## 12. What does the following error message tell you?
 
@@ -105,3 +129,4 @@ ArgumentError: wrong number of arguments (1 for 2)
   from /Users/username/.rvm/rubies/ruby-2.0.0-p353/bin/irb:12:in `<main>'
 
 ```
+method calculate_product 需要有两个参数，只出现一个还要加一个。
